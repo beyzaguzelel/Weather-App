@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hava Durumu</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body> 
+      <section class="top-banner">
+        <div class="container">
+          <h3 class="heading">Weather Forecast</h3>
+          <form method="POST">
+            <input type="text" name="city" placeholder="City name" autofocus>
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </section>
+
+	<!-- Current Weather -->
+	<div id="current" class="wrapper">
+		<h1 class="location"><%= weather.city %></h1>
+		<h2 class="date"><%= weather.date %></h2>
+		<div class="weatherIcon">
+				<div class="inner"><img src="https://www.metaweather.com/static/img/weather/<%= weather.icon %>.svg" alt=""></div>
+		</div>
+		<p class="temp"><%= weather.temp %></p>
+		<p class="conditions"><%= weather.conditions %></p>
+	</div>
+	
+	<!-- Future Forecast -->
+	<div id="future" class="wrapper">
+		<div class="container">
+			<h3 class="day"><%= weather.date1 %></h3>
+			<div class="weatherIcon">
+					<div class="inner"><img src="https://www.metaweather.com/static/img/weather/<%= weather.icon1 %>.svg" alt=""></div>
+			</div>
+			<p class="conditions"><%= weather.conditions1 %></p>
+			<p class="tempRange"><span class="high"><%= weather.temp1 %></span></p>
+		</div>
+		<div class="container">
+			<h3 class="day"><%= weather.date2 %></h3>
+			<div class="weatherIcon">
+					<div class="inner"><img src="https://www.metaweather.com/static/img/weather/<%= weather.icon2 %>.svg" alt=""></div>
+			</div>
+			<p class="conditions"><%= weather.conditions2 %></p>
+			<p class="tempRange"><span class="high"><%= weather.temp2 %></span></p>
+		</div>
+		<div class="container">
+			<h3 class="day"><%= weather.date3 %></h3>
+			<div class="weatherIcon">
+					<div class="inner"><img src="https://www.metaweather.com/static/img/weather/<%= weather.icon3 %>.svg" alt=""></div>
+			</div>
+			<p class="conditions"><%= weather.conditions3 %></p>
+			<p class="tempRange"><span class="high"><%= weather.temp3 %></span></p>
+		</div>
+	</div>
+</body>
+</html> 
+
